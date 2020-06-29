@@ -5,3 +5,4 @@ Werkzeug==0.15.5
 google-cloud==0.34.0
 Flask==1.1.1
 gunicorn==19.9.0
+google-cloud-storage==1.17.0
