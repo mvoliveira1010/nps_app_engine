@@ -119,5 +119,6 @@ def upload_arquivo():
 			return render_template('upload.html')
 	else:
 		return redirect('/')
+		
 if __name__ == "__main__":
     app.run(debug=True)
