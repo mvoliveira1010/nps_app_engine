@@ -106,7 +106,7 @@ def upload_arquivo():
 				return render_template('upload.html')
 			else:
 				upload_to_storage(request.files.get('inputFile'))
-				df = pd.read_csv(f"./uploads/{file.filename}",sep=None,engine='python',encoding='utf-8')
+				df = pd.read_csv(f'gs://disparo_nps_corporativos/{file.filename}')
 				customers = df.where(pd.notnull(df), None)
 				result = load_dispatch(customers,datas_json,max_date)
 				if result[0] is False:
